@@ -1,34 +1,52 @@
-.react-img{
-    width: 250px;
-    margin-bottom: 50px;
+.react-img {
+  width: 250px;
+  margin-bottom: 50px;
 }
-.card-container{
-    background-color: rgb(255, 165, 0);
-    width: 450px;
-    height: 650px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
-    overflow: hidden;
+.card-container {
+  background: linear-gradient(
+    55deg,
+    #F79554 40%,
+    #4BA6DB 39.47%,
+    #4BA6DB 50%,
+    #F79554 50%
+  );
+  width: 450px;
+  height: 700px;
+  border-radius: 25px;
+  overflow: hidden;
 }
-.card{
-    margin: 30px;
-    background-color:rgb(247, 226, 181) ;
-    width: 120px;
-    border: none;
-    border-radius: 7px;
+.card {
+  margin: 30px;
+  margin-bottom: 15px;
+  background-color: rgb(247, 226, 181);
+  width: 130px;
+  border: none;
+  border-radius: 7px;
+  height: 120px;
 }
-.card:hover{
-    cursor: pointer;
-    box-shadow: 3px 3px 5px;
-    background-color: rgb(255, 206, 153);
+.card:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 5px;
+  background-color: rgb(255, 206, 153);
 }
 
-.card-img{
-    object-fit: cover;
-    height: 75px;
-    margin-bottom: -20px;
-    margin-top: 5px;
+.card-img {
+  object-fit: cover;
+  height: 75px;
+  margin-bottom: -20px;
+  margin-top: 5px;
+}
+.card:hover img{
+    height: 85px;
+    transition:0.5s ease all;
+}
+ul{
+    margin-left:-10px ;
+    text-align: left;
+}
+.small-card-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }

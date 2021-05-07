@@ -1,10 +1,8 @@
 import './Cards.css';
-import { categories } from '../helper/data';
 import { useState } from 'react';
-import logo from "../assets/react.svg";
 
 
-const Cards = () => {
+const Cards = ({ name, img, options}) => {
 
     const [click, setClick] = useState(true)
 
@@ -13,28 +11,23 @@ const Cards = () => {
     }
     return (
         <div>
-            <img src={logo} className="react-img"/>
-        <div className="card-container">
-            
-            {categories.map((card) => {
-                return (
-                    <div className="cards" onClick={handleClick}>
-                        {click ? 
-                        <div className="card">
-                            <img src={card.img} alt={card.name} className="card-img"/>
-                            <h3 className="card-name">{card.name}</h3>
-                        </div>:
-                        <div className="card">
-                            <ul>{card.options}</ul>
-                        </div>
-                            
-                        }
-                    </div>   
-                )
-            })}
-        </div>
-        </div>
-    );
+            <div onClick={handleClick}>
+                {click ? 
+                <div className="card" >
+                    <img src={img} alt={name} className="card-img"/>
+                    <h3 className="card-name">{name}</h3>
+                </div>:
+                <div className="card">
+                    <ul>
+                        {options.map((element, index) => (
+                            <li key={index}>{element}</li>
+                        ))}
+                    </ul>
+                </div>
+                }
+            </div> 
+        </div>  
+    )
 }
 
 export default Cards;
